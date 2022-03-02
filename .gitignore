@@ -1,0 +1,15 @@
+bin/
+build
+out/
+.gradle/
+*.log
+*.log.*
+
+*.class
+productionLog
+*~
+
+# IDEs
+.settings
+.eclipse
+.idea/

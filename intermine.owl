@@ -1,0 +1,499 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://intermine.org/ontology/intermine.owl">
+    <dc:license>https://creativecommons.org/licenses/by/4.0/</dc:license>
+    <dc:description>Simple ontology for description of classes and their attributes defined in intermine core model</dc:description>
+    <rdfs:seeAlso>http://intermine.org/</rdfs:seeAlso>
+    <dc:title>InterMine core model ontology</dc:title>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SyntenyBlock"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyAnnotation"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SyntenicRegion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Publication"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Chromosome">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyTerm"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/BioEntity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://intermine.org/vocabulary/Annotatable"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Transcript">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceCollection">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Protein">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyRelation"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SOTerm">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Organism"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyEvidence"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/UTR">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Author"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/MeshTerm"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceFeature">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/IntergenicRegion">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Ontology"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Exon">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Gene">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Sequence"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Location"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Intron">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/GeneFlankingRegion">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Synonym"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/SequenceVariant"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Strain">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/Comment"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/DataSet"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyTermSynonym"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/DataSource"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/CrossReference"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/OntologyAnnotationEvidenceCode"/>
+  <owl:Class rdf:about="http://intermine.org/vocabulary/CDS">
+    <rdfs:subClassOf rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasObsolete">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasScore">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Synonym"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLength">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasShortName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasAdjacentGenes">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Gene"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/IntergenicRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSequence">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Sequence"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPublication">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Publication"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasNamespace">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasQualifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyAnnotation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDoi">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSequenceOntologyTerm">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SOTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceCollection"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasGene">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Gene"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Exon"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasFeature">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasAnnotationVersion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Strain"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLocatedFeatures">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Location"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDataSets">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Ontology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasTranscripts">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Transcript"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasEnd">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSymbol">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasAbstractText">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLastName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLocations">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Location"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSyntenyBlock">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SyntenyBlock"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SyntenicRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasStrain">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Strain"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasOverlappingFeatures">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasFeatures">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Strain"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPrimaryIdentifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Annotatable"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLocatedOn">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasStart">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasJournal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasVersion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSecondaryIdentifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasUrl">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Ontology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasMd5checksum">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasCDSs">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/CDS"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasOntologyAnnotations">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyAnnotation"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Annotatable"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasMolecularWeight">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasCommonName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPrimaryAccession">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasEntities">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Annotatable"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasBioEntities">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasChromosome">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Chromosome"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasRedundant">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPublications">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Publication"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasStrains">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Strain"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasIntrons">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Intron"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasEvidence">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyEvidence"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyAnnotation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDownstreamIntergenicRegion">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/IntergenicRegion"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasGenus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSyntenicRegions">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SyntenicRegion"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SyntenyBlock"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasChildFeatures">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSubject">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/CrossReference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasTaxonId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasFlankingRegions">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/GeneFlankingRegion"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasIdentifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/CrossReference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasGenes">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Gene"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Protein"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasScoreType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasUTRs">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/UTR"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasOrganism">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Organism"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasOntologyTerm">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyAnnotation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDirection">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/GeneFlankingRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasBriefDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasInitials">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasMonth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPubMedId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasCrossReferences">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/CrossReference"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasResidues">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Sequence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasUpstreamIntergenicRegion">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/IntergenicRegion"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasExons">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Exon"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasLicence">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPages">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSynonyms">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Synonym"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/BioEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasOntology">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Ontology"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyAnnotationEvidenceCode"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasProtein">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Protein"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Transcript"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasRelations">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasIncludeGene">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/GeneFlankingRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasProteins">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Protein"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Gene"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasMeshTerms">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/MeshTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasFirstName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasStrand">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Location"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasChromosomeLocation">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Location"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/SequenceFeature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasAssemblyVersion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Strain"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasIssue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasVolume">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasChildTerm">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTermSynonym"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasFirstAuthor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasParentTerm">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDataSource">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/DataSource"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSource">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/DataSource"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/CrossReference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasAuthors">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/Author"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Publication"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDirect">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasSpecies">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Organism"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasParents">
+    <rdfs:range rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyTerm"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasDistance">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/GeneFlankingRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasRelationship">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/OntologyRelation"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
