@@ -34,7 +34,7 @@ public class InterMineOntologyGenerator
 			generateOntologyClass(cd, ontologyModel);
 		}
 		try {
-			String ontologyFile = "intermine.owl";
+			String ontologyFile = "doc/intermine.owl";
 			PrintWriter out = new PrintWriter(new FileWriter(ontologyFile));
 			ontologyModel.write(out, "RDF/XML");
 		} catch (IOException ex) {
