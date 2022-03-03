@@ -118,7 +118,7 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPublication">
     <rdfs:range rdf:resource="http://intermine.org/vocabulary/Publication"/>
-    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/DataSet"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasNamespace">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -274,7 +274,7 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasPublications">
     <rdfs:range rdf:resource="http://intermine.org/vocabulary/Publication"/>
-    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Author"/>
+    <rdfs:domain rdf:resource="http://intermine.org/vocabulary/Annotatable"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://intermine.org/vocabulary/hasStrains">
     <rdfs:range rdf:resource="http://intermine.org/vocabulary/Strain"/>

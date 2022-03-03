@@ -23,10 +23,10 @@ repositories {
 }
 
 dependencies {
-    compile group: "org.intermine", name: "intermine-model", version: "4.2.0"
-    compile group: "org.intermine", name: "intermine-objectstore", version: "4.2.0"
-    compile group: "org.intermine", name: "intermine-api", version: "4.2.0"
-    compile group: "org.intermine", name: "intermine-webapp", version: "4.2.0", classifier: "classes"
+    compile group: "org.intermine", name: "intermine-model", version: "5.0.6"
+    compile group: "org.intermine", name: "intermine-objectstore", version: "5.0.6"
+    compile group: "org.intermine", name: "intermine-api", version: "5.0.6"
+    compile group: "org.intermine", name: "intermine-webapp", version: "5.0.6", classifier: "classes"
     compile group: "org.apache.jena", name: "apache-jena-libs", version: "3.16.0"
 }
 

@@ -173,7 +173,7 @@
 	<attribute name="month" type="java.lang.String"/>
 	<attribute name="abstractText" type="java.lang.String" term="http://edamontology.org/data_2849"/>
 	<attribute name="pubMedId" type="java.lang.String" term="http://edamontology.org/data_1187"/>
-	<collection name="authors" referenced-type="Author" reverse-reference="publications"/>
+	<collection name="authors" referenced-type="Author" reverse-reference="publication"/>
 	<collection name="entities" referenced-type="Annotatable" reverse-reference="publications"/>
 	<collection name="meshTerms" referenced-type="MeshTerm" reverse-reference="publications"/>
 </class>
@@ -192,7 +192,7 @@
 	<attribute name="initials" type="java.lang.String"/>
 	<attribute name="lastName" type="java.lang.String" term="http://semanticscience.org/resource/SIO_000182"/>
 	<attribute name="name" type="java.lang.String" term="http://semanticscience.org/resource/SIO_000183"/>
-	<collection name="publications" referenced-type="Publication" reverse-reference="authors"/>
+	<collection name="publication" referenced-type="Publication" reverse-reference="authors"/>
 </class>
 <class name="CrossReference" is-interface="true" term="http://semanticscience.org/resource/SIO_001171">
 	<attribute name="identifier" type="java.lang.String" term="http://semanticscience.org/resource/SIO_000675"/>
